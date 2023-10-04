@@ -2,7 +2,6 @@ Skapa ett tärningsspel som versionshanteras med GIT!
 Här ska användaren via en Scanner ska kunna välja:
 
 
-
 Antal Tärningar --- KLAR
 
 Spelarens namn -- KLAR
@@ -16,15 +15,17 @@ Spelaren med högst poäng vinner (åtminstone 2 spelare ska finnas med) -- KLAR
 
 Väl Godkänt:
 
+
+Scanner befinner sig inom en egen klass ---- KLAR
+
+Hantera att rätt svar kommer in under inmatning --- KLAR
+
+Antal spelare - VG --------- KLAR
+
 Två vinnare - hantera detta på ett relevant sätt
 
-Scanner befinner sig inom en egen klass
+Namn får bara vara ‘string’ --- EJ KLAR
 
-Hantera att rätt svar kommer in under inmatning
-
-Namn får bara vara ‘string’
-
-Nummer får bara vara ‘integer’
+Nummer får bara vara ‘integer’ --- EJ KLAR
 
 Tre relevanta enhetstester
-Antal spelare - VG
