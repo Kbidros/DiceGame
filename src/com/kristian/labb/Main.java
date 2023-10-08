@@ -1,7 +1,21 @@
+// DiceGame
+// Created by Kristian, uploaded 2023-10-08
+// A die game allowing you to choose the following:
+// Number of players
+// Number of dice
+// Number of rounds
+// Entering player names
+// Each player gets to throw 1+ die a round
+// The game displays the scores and also determines the winner
+// Scanner has its own class, and so does Player
+// If you type a character when asked for a number, the game will crash
+//
+// For more information and detailed instructions, please see the README file.
+
 package com.kristian.labb;
 
 import java.util.Random;
-import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -10,6 +24,7 @@ public class Main {
         DiceGameScanner diceGameScanner = new DiceGameScanner();
         Random random = new Random();
 
+        System.out.println("Welcome to the game!");
 
         // Number of players
         int numPlayers = diceGameScanner.getNumberOfPlayers("Enter the number of players:");
@@ -28,9 +43,14 @@ public class Main {
 
         // Number of Dice
         int numDice = diceGameScanner.getNumberOfDice("How many dice do you want to play with?:");
-        int rounds = 2;
 
-        for (int round = 0; round < rounds; round++) {
+
+        // Number of rounds + rolling
+
+        int numRounds = diceGameScanner.getNumberOfRounds("How many rounds do you want to play?:");
+
+
+        for (int round = 0; round < numRounds; round++) {
             for (Player player : players) {
                 System.out.println(player.getName() + " is throwing!");
 
@@ -48,15 +68,19 @@ public class Main {
             }
         }
 
-        // Display scores and determine the winner
+        // Display scores and determine the winner!!
+
+        // DisplayScores
+        for (Player player : players) {
+            System.out.println(player.getName() + " total score: " + player.getScore());
+        }
+
+        // Winner!!
        Player winningPlayer = players[0];
         for (int i = 0; i < numPlayers; i++) {
             if (players[i].getScore() > winningPlayer.getScore()) {
                 winningPlayer = players[i];
             }
-        }
-        for (Player player : players) {
-            System.out.println(player.getName() + " total score: " + player.getScore());
         }
 
         System.out.println("And the winner is... " + winningPlayer.getName() + ", Congratulations!");

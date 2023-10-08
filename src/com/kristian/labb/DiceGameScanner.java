@@ -28,6 +28,12 @@ public class DiceGameScanner {
 
     }
 
+    public int getNumberOfRounds(String numRounds) {
+        System.out.println(numRounds);
+        return sc.nextInt();
+    }
+
+
     public void nextLine() {
         sc.nextLine();
     }
