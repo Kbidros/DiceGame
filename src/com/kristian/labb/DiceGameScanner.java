@@ -1,5 +1,6 @@
 package com.kristian.labb;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class DiceGameScanner {
@@ -18,19 +19,41 @@ public class DiceGameScanner {
 
     public int getNumberOfPlayers (String players){
         System.out.println(players);
-        return sc.nextInt();
+        try {
+            return sc.nextInt();
+        }catch (InputMismatchException e){
+
+            System.out.println("Invalid input, please enter an integer.");
+            sc.nextLine();
+            return getNumberOfPlayers(players);
+        }
 
     }
 
     public int getNumberOfDice (String dice ) {
         System.out.println(dice);
-        return sc.nextInt();
+        try {
+            return sc.nextInt();
+        }catch (InputMismatchException e){
+
+            System.out.println("Invalid input, please enter an integer.");
+            sc.nextLine();
+            return getNumberOfDice(dice);
+        }
 
     }
 
     public int getNumberOfRounds(String numRounds) {
         System.out.println(numRounds);
-        return sc.nextInt();
+        try {
+            return sc.nextInt();
+        }catch (InputMismatchException e){
+
+            System.out.println("Invalid input, please enter an integer.");
+            sc.nextLine();
+            return getNumberOfRounds(numRounds);
+        }
+
     }
 
 

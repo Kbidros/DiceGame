@@ -8,7 +8,7 @@
 // Each player gets to throw 1+ die a round
 // The game displays the scores and also determines the winner
 // Scanner has its own class, and so does Player
-// If you type a character when asked for a number, the game will crash
+// If you type a character when asked for a number, the game will ask you to input an integer.
 //
 // For more information and detailed instructions, please see the README file.
 

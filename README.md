@@ -29,7 +29,5 @@ Once the game starts, it will proceed as follows:
 
 ### Note
 
-_Please be cautious while entering the number of players. Entering invalid characters or non-numeric values may lead to unexpected behavior, including crashes._
-
 Enjoy the game, and feel free to reach out if you have any questions or feedback!
 
