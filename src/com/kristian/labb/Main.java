@@ -16,13 +16,12 @@ package com.kristian.labb;
 
 import java.util.Random;
 
-
 public class Main {
     public static void main(String[] args) {
 
         // Instantiate
         DiceGameScanner diceGameScanner = new DiceGameScanner();
-        Random random = new Random();
+        Dice dice = new Dice();
 
         System.out.println("Welcome to the game!");
 
@@ -57,7 +56,7 @@ public class Main {
                 int playerSum = 0;
 
                 for (int j = 0; j < numDice; j++) {
-                    int roll = random.nextInt(6) + 1;
+                    int roll = dice.roll();
                     System.out.println(roll);
                     playerSum += roll;
                 }
